@@ -4,6 +4,7 @@ Vagrant::Config.run do |config|
     db1_config.vm.box = "ubuntu-1110-server-amd64"
     db1_config.vm.box_url = "http://timhuegdon.com/vagrant-boxes/ubuntu-11.10.box"
     db1_config.vm.host_name = "oraxe"
+    db1_config.vm.forward_port 1521, 1621
     db1_config.vm.provision :puppet, :module_path => "modules", :options => "--verbose --trace" do |puppet|
       puppet.manifests_path = "manifests"
       puppet.manifest_file  = "site.pp"
