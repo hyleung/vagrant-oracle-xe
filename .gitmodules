@@ -1,0 +1,3 @@
+[submodule "modules/oracle"]
+	path = modules/oracle
+	url = git@github.com:hyleung/oracle-puppet-module.git
